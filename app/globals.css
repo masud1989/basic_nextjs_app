@@ -17,11 +17,17 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  background-color: white;
+  /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+}
+h1{
+  background-color: cadetblue;
+  color: brown;
+  font-size: 39px;
 }
