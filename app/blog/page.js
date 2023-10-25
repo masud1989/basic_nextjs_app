@@ -1,21 +1,22 @@
-import React from 'react'
 import Header from '../components/Header';
+import BlogService from '../components/blogService';
 
-const page = async () => {
+const page = async(blogEl) => {
   const response = await fetch('https://jsonplaceholder.typicode.com/posts');
   const data = await response.json()
 
   return (
-   <>
+   <div >
       <Header />
-      <div>Blog Page</div>
+      <div className='container rounded-md my-5 mx-auto'>
+       
       {
         data.map( (item) =>{
-          <h1>{item.title}</h1>
-          // <p>{item.body}</p>
+          return <BlogService key = {item.id} {...item} />
         } )
       }
-   </>
+      </div>
+   </div>
   )
 }
 
